@@ -1,22 +1,29 @@
-# Use official node image as the base image
+# Use official Node.js 14 Alpine image as the base image for the build stage
 FROM node:14-alpine AS build
 
-# Set working directory
+# Set the working directory inside the container
 WORKDIR /app
 
-# Install dependencies
-COPY package.json .
-COPY yarn.lock .
-RUN yarn install
+# Copy package.json and package-lock.json to the container
+COPY package.json package-lock.json ./
 
-# Copy project files
+# Install dependencies
+RUN npm install
+
+# Copy the entire project to the container
 COPY . .
 
 # Build the project
-RUN yarn build
+RUN npm run build
 
-# Production environment
+# Start the production environment
 FROM nginx:alpine
+
+# Copy the build files from the build stage to the nginx directory
 COPY --from=build /app/dist /usr/share/nginx/html
+
+# Expose port 80
 EXPOSE 80
+
+# Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]

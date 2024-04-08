@@ -7,7 +7,7 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - FLASK_ENV=production  # Set Flask environment to production
+      - FLASK_ENV=production
     depends_on:
       - db
 
@@ -15,7 +15,7 @@ services:
     build:
       context: ./frontend
     ports:
-      - "3000:80"  # Map to port 80 of nginx in frontend container
+      - "3000:80"
     environment:
       - REACT_APP_BACKEND_URL=http://backend:5000
     depends_on:
