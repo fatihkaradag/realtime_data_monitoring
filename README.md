@@ -7,8 +7,8 @@ Build a real-time data monitoring dashboard that collects, processes, and displa
 
 ### Backend
 
-- Language: Python (with Flask or Django framework)
-- Database: PostgreSQL (or any other relational database)
+- Language: Python with Flask
+- Database: PostgreSQL
 - Streaming Platform: Apache Kafka
 - Containerization: Docker
 - Orchestration: Kubernetes
@@ -16,7 +16,7 @@ Build a real-time data monitoring dashboard that collects, processes, and displa
 ### Frontend
 
 - JavaScript Framework: React
-- Data Visualization: Grafana (or any other visualization library)
+- Data Visualization: Grafana
 
 
 #### Features:
@@ -54,14 +54,3 @@ Build a real-time data monitoring dashboard that collects, processes, and displa
 - Add support for historical data analysis and visualization.
 - Integrate alerting mechanisms to notify users about critical events or anomalies.
 - Implement logging and monitoring using tools like Prometheus and ELK stack.
-
-##### Benefits:
-
-- Gain hands-on experience with building a real-time data processing system.
-- Learn about containerization and orchestration with Docker and Kubernetes.
-- Enhance your skills in backend development with Python and frontend development with React.
-- Practice database management and data visualization techniques.
-- This project will provide you with practical experience in developing a scalable and real-time data monitoring solution, which is a valuable skill in various industries, including IoT, finance, and e-commerce.
-
-
-
